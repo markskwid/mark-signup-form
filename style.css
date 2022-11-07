@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+/** typograpgy **/
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  max-width: 85%;
+  color: white;
+  line-height: 1.2;
+}
+
+p {
+  font: 1rem;
+  color: white;
+  line-height: 1.5;
+}
+
+.main-container .form-container form .error-message {
+  color: var(--Red);
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-style: italic;
+  float: right;
+  text-align: end;
+  margin-top: 0.5em;
+  margin-bottom: 1.7em;
+  margin-right: 0.6em;
+  font-weight: 600;
+  display: none;
+}
+
+.main-container .col .alert p span {
+  font-weight: bold;
+}
+
+.main-container .form-container p {
+  color: var(--DarkBlue);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.main-container .form-container p > a {
+  color: var(--Red);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+    max-width: 85%;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  p {
+    font: 1rem;
+    color: white;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .main-container .form-container form .error-message {
+    color: var(--Red);
+    margin-left: auto;
+    font-size: 0.7rem;
+    font-style: italic;
+    float: right;
+    text-align: end;
+    margin-top: 0.5em;
+    margin-bottom: 1.7em;
+    margin-right: 0;
+    font-weight: 600;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.2em;
+    max-width: 85%;
+    color: white;
+    line-height: 1.2;
+    text-align: start;
+  }
+
+  p {
+    font: 1rem;
+    color: white;
+    line-height: 1.5;
+    text-align: start;
+  }
+
+  .main-container .form-container form .error-message {
+    color: var(--Red);
+    margin-left: auto;
+    font-size: 0.7rem;
+    font-style: italic;
+    float: right;
+    text-align: end;
+    margin-top: 0.5em;
+    margin-bottom: 1.7em;
+    margin-right: 0;
+    font-weight: 600;
+    display: none;
+  }
+}
+
+/** layout **/
+
+body {
+  min-height: 100vh;
+  background-color: var(--Red);
+  background-image: url("./images/bg-intro-desktop.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  width: 1200px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.main-container .col {
+  padding: 1em;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.main-container .col .form-container {
+  padding: 1.7em;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px rgba(66, 56, 56, 0.3);
+}
+
+.main-container .col form .input-container input {
+  width: 90%;
+  border: none;
+  padding: 1em 1.5em;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--DarkBlue);
+  outline: 1px solid var(--GrayishBlue);
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.main-container .col form input:focus {
+  outline: 1px solid var(--Blue);
+}
+
+.main-container .col form .input-container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.5em;
+}
+
+.main-container .col form .input-container .icon {
+  bottom: 10px;
+  text-align: center;
+  right: 20px;
+  position: absolute;
+  display: none;
+}
+
+.main-container .col form button {
+  background-color: var(--Green);
+  width: 100%;
+  border: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1em;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  margin: 0.2em 0.3em;
+  box-shadow: 0 3px rgba(78, 78, 78, 0.5);
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.main-container .col form button:hover {
+  background-color: rgba(56, 204, 140, 0.7);
+}
+
+.main-container .col .alert {
+  background-color: var(--Blue);
+  padding: 0.05em;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 1.2em;
+  box-shadow: 0 8px rgba(66, 56, 56, 0.3);
+}
+
+@media screen and (min-width: 100px) and (max-width: 600px) {
+  body {
+    min-height: 100vh;
+    padding: 1.7em 0;
+    background-color: var(--Red);
+    background-image: url("./images/bg-intro-mobile.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container .col {
+    padding: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .main-container .col .form-container {
+    padding: 1.2em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    box-shadow: 0 8px rgba(66, 56, 56, 0.3);
+  }
+
+  .main-container .col form .input-container {
+    position: relative;
+    width: 95%;
+    padding: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .main-container .col form .input-container input {
+    width: 90%;
+    border: none;
+    padding: 1em 1.5em;
+    margin: 0;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: var(--DarkBlue);
+    outline: 1px solid var(--GrayishBlue);
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .main-container .col form button {
+    background-color: var(--Green);
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-radius: 5px;
+    margin: 0.2em 0;
+    box-shadow: 0 3px rgba(78, 78, 78, 0.5);
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+
+  .main-container .col form .input-container .icon {
+    bottom: 10px;
+    text-align: center;
+    right: 5px;
+    position: absolute;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+  body {
+    min-height: 100vh;
+    padding: 1.7em 0;
+    background-color: var(--Red);
+    background-image: url("./images/bg-intro-mobile.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .main-container .col {
+    padding: 1em;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .main-container .col .form-container {
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    box-shadow: 0 8px rgba(66, 56, 56, 0.3);
+  }
+
+  .main-container .col form .input-container {
+    position: relative;
+    width: 98%;
+    padding: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .main-container .col form .input-container input {
+    width: 90%;
+    border: none;
+    padding: 1em 1.5em;
+    margin: 0;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: var(--DarkBlue);
+    outline: 1px solid var(--GrayishBlue);
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .main-container .col form button {
+    background-color: var(--Green);
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border-radius: 5px;
+    margin: 0.2em 0;
+    box-shadow: 0 3px rgba(78, 78, 78, 0.5);
+    cursor: pointer;
+    transition: 0.2s ease-in;
+  }
+
+  .main-container .col form .input-container .icon {
+    bottom: 10px;
+    text-align: center;
+    right: 5px;
+    position: absolute;
+    display: none;
+  }
+
+  .main-container .col .alert {
+    background-color: var(--Blue);
+    padding: 0.05em;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2em;
+    box-shadow: 0 8px rgba(66, 56, 56, 0.3);
+  }
+}
